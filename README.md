@@ -1,5 +1,3 @@
-Here's a professional `README.md` file for your calculator project:
-
 ```markdown
 # Python Command-Line Calculator
 
