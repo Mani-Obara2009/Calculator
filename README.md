@@ -1,69 +1,79 @@
-Simple Python Calculator
+```markdown
+# Python Command-Line Calculator
 
-A lightweight command-line calculator that performs basic arithmetic, exponentiation, and roots.
-Features
+A simple yet powerful command-line calculator implemented in Python that supports basic arithmetic operations, exponents, and roots.
 
-    ➕ Addition (+)
+## Features
 
-    ➖ Subtraction (-)
+- Basic operations: addition (+), subtraction (-), multiplication (*), division (/)
+- Advanced operations:
+  - Exponentiation (**)
+  - Nth root (ROOT)
+- Interactive help system (type HELP)
+- Error handling for invalid inputs and division by zero
 
-    ✖️ Multiplication (*)
+## Installation
 
-    ➗ Division (/)
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Mani-Obara2009/Calculator.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Calculator
+   ```
 
-    🔢 Exponentiation (**)
+## Usage
 
-    🌱 Root (root)
-
-    ❓ Help menu (help)
-
-Usage
-
-    Run the script:
-    bash
-
+Run the calculator:
+```bash
 python calculator.py
+```
 
 Follow the prompts:
-plaintext
+1. Enter your first number
+2. Enter your second number
+3. Enter an operator (type HELP for supported operators)
 
-    Enter your first number: 8  
-    Enter your second number: 3  
-    Enter your operator (type "help" for options): root  
-    Result: 2.0  
+### Supported Operators
 
-Supported Operators
-Operator	Example	Output
-+	5 + 3	8
--	5 - 3	2
-*	5 * 3	15
-/	6 / 3	2
-**	2 ** 3	8
-root	8 root 3	2
-Error Handling
+| Operator | Description               | Example Input |
+|----------|---------------------------|---------------|
+| +        | Addition                  | 5 + 3 → 8     |
+| -        | Subtraction               | 5 - 3 → 2     |
+| *        | Multiplication            | 5 * 3 → 15    |
+| /        | Division                  | 6 / 3 → 2     |
+| **       | Exponentiation            | 2 ** 3 → 8    |
+| ROOT     | Nth root (1st num √ 2nd)  | 8 ROOT 3 → 2  |
+| HELP     | Show help message         | HELP          |
 
-    Invalid operators trigger an error message with support contact.
+## Error Handling
 
-Contact
+The calculator handles:
+- Division by zero attempts
+- Invalid numeric inputs
+- Unknown operators
+- Other unexpected errors
 
-📧 Email: mani.obara.work@gmail.com
-How to Install & Run
+## Example Session
 
-    Ensure Python 3 is installed.
+```
+Enter your first number: 8
+Enter your second number: 3
+Enter your operator: ROOT
+2.0
 
-    Clone the repo:
-    bash
+Enter your first number: 10
+Enter your second number: 0
+Enter your operator: /
+You can't divide by zero!
+```
 
-git clone https://github.com/Mani-Obara2009/Calculator.git
+## Contributing
 
-Run the script:
-bash
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
-    cd Calculator
-    python calculator.py
+## License
 
-This version includes:
-✅ Clear formatting for GitHub/GitLab
-✅ Emojis for visual appeal
-✅ Copy-paste friendly tables
-✅ Minimal dependencies (just Python 3)
+Completely open source ❤️ 
+In the mission of spreading kindness and open software culture.
