@@ -1,7 +1,7 @@
 ```markdown
 # Python Command-Line Calculator
 
-A simple yet powerful command-line calculator implemented in Python that supports basic arithmetic operations, exponents, and roots.
+✨ A simple yet powerful calculator that celebrates open-source culture and kindness ✨
 
 ## Features
 
@@ -10,70 +10,71 @@ A simple yet powerful command-line calculator implemented in Python that support
   - Exponentiation (**)
   - Nth root (ROOT)
 - Interactive help system (type HELP)
-- Error handling for invalid inputs and division by zero
+- Built with ❤️ for the open-source community
 
 ## Installation
 
-1. Clone this repository:
+1. Clone with love:
    ```bash
    git clone https://github.com/Mani-Obara2009/Calculator.git
    ```
-2. Navigate to the project directory:
+2. Enter the joyful directory:
    ```bash
    cd Calculator
    ```
 
 ## Usage
 
-Run the calculator:
+Start the kindness:
 ```bash
 python calculator.py
 ```
 
-Follow the prompts:
-1. Enter your first number
-2. Enter your second number
-3. Enter an operator (type HELP for supported operators)
+### Operator Love Languages
 
-### Supported Operators
-
-| Operator | Description               | Example Input |
+| Operator | Description               | Example       |
 |----------|---------------------------|---------------|
-| +        | Addition                  | 5 + 3 → 8     |
-| -        | Subtraction               | 5 - 3 → 2     |
-| *        | Multiplication            | 5 * 3 → 15    |
-| /        | Division                  | 6 / 3 → 2     |
-| **       | Exponentiation            | 2 ** 3 → 8    |
-| ROOT     | Nth root (1st num √ 2nd)  | 8 ROOT 3 → 2  |
-| HELP     | Show help message         | HELP          |
+| +        | Addition (bringing together) | 5 + 3 → 8     |
+| -        | Subtraction (respecting boundaries) | 5 - 3 → 2 |
+| *        | Multiplication (growing together) | 5 * 3 → 15 |
+| /        | Division (sharing equally) | 6 / 3 → 2    |
+| **       | Empowerment                | 2 ** 3 → 8   |
+| ROOT     | Finding common ground      | 8 ROOT 3 → 2 |
+| HELP     | Offering support           | HELP         |
 
-## Error Handling
+## Kindness Principles
 
-The calculator handles:
-- Division by zero attempts
-- Invalid numeric inputs
-- Unknown operators
-- Other unexpected errors
+- Handles division by zero with gentle reminders
+- Guides users through errors with patience
+- Welcomes all inputs without judgment
 
-## Example Session
+## Example of Compassionate Computing
 
 ```
-Enter your first number: 8
-Enter your second number: 3
-Enter your operator: ROOT
-2.0
-
 Enter your first number: 10
 Enter your second number: 0
 Enter your operator: /
-You can't divide by zero!
+You can't divide by zero! (But we appreciate you trying!) ❤️
 ```
 
-## Contributing
+## Spread the Love
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+🌱 **Contributing Guidelines**:
+- All kindness-focused contributions welcome
+- Please wrap your code in good intentions
+- Document your changes with care
 
-## License
+## Open-Source Philosophy
 
-Completely open source ❤️ 
+```text
+Completely open source ❤️
 In the mission of spreading kindness and open software culture.
+
+This project is a gift to the community - take it, learn from it,
+improve it, and share your improvements with others.
+```
+
+---
+
+*"We rise by lifting others"* - Robert Ingersoll
+```
