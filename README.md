@@ -1,7 +1,7 @@
-Simple Python Calculator
+🧮 Simple Python Calculator
 
-A lightweight command-line calculator that performs basic arithmetic, exponentiation, and roots.
-Features
+A command-line calculator written in Python that supports basic arithmetic operations and root calculations. It runs in an infinite loop, taking user input and printing the result.
+📌 Features
 
     ➕ Addition (+)
 
@@ -11,59 +11,42 @@ Features
 
     ➗ Division (/)
 
-    🔢 Exponentiation (**)
+    🧠 Power (**) — raises the first number to the power of the second
 
-    🌱 Root (root)
+    🌱 Root (ROOT) — calculates the n-th root of the first number
 
-    ❓ Help menu (help)
+    🆘 Help menu — displays available operations with HELP
 
-Usage
+🚀 How to Run
 
-    Run the script:
-    bash
+    Make sure Python 3 is installed on your system.
 
-python calculator.py
+    Save the script as calculator.py.
 
-Follow the prompts:
-plaintext
+    Run the program:
 
-    Enter your first number: 8  
-    Enter your second number: 3  
-    Enter your operator (type "help" for options): root  
-    Result: 2.0  
-
-Supported Operators
-Operator	Example	Output
-+	5 + 3	8
--	5 - 3	2
-*	5 * 3	15
-/	6 / 3	2
-**	2 ** 3	8
-root	8 root 3	2
-Error Handling
-
-    Invalid operators trigger an error message with support contact.
-
-Contact
-
-📧 Email: mani.obara.work@gmail.com
-How to Install & Run
-
-    Ensure Python 3 is installed.
-
-    Clone the repo:
-    bash
-
-git clone https://github.com/Mani-Obara2009/Calculator.git
-
-Run the script:
-bash
-
-    cd Calculator
     python calculator.py
 
-This version includes:
-✅ Clear formatting for GitHub/GitLab
-✅ Emojis for visual appeal
-✅ Copy-paste friendly tables
-✅ Minimal dependencies (just Python 3)
+💻 Example Usage
+
+Enter your first number: 9
+Enter your second number: 2
+Enter your operator (type HELP for options): ROOT
+Result: 3.0
+
+Enter your first number: 3
+Enter your second number: 4
+Enter your operator (type HELP for options): **
+Result: 81.0
+
+❗ Error Handling
+
+    Dividing by zero? You'll get a message: "You can't divide by zero!"
+
+    Invalid input types? You'll be told to check your numbers.
+
+    Any unknown operator? Type HELP to see the list of supported commands.
+
+📎 License
+
+This project is open-source and free to use, modify, and share.
