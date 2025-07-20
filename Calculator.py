@@ -21,7 +21,11 @@ while True:
             return n1 ** n3
         elif operator == "/":
             return n1 / n2
-        else :
-            return "There was an error with your inputs, If you think this is an error, contact me on mani.obara.work@gmail.com"
-
-    print(calculator(n1 , n2 , operator))
+    try:
+        print(calculator(n1, n2, operator))
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+    except ValueError:
+        print("Invalid input! Check the help section.")
+    except Exception as e:
+        print(f"Unknown error: {e}")
