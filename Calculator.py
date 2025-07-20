@@ -1,31 +1,40 @@
-import math
-while True:
-    # Taking some inputs
-    n1 = int(input("Enter your first number : "))
-    n2 = int(input("Enter your second number : "))
-    operator = input("Enter your operator (To see the supported ones, type help) : ").upper().strip()
+def calculator(n1, n2, operator):
+    if operator == "HELP":
+        return (
+            "Supported operators:\n"
+            "+ : Addition\n"
+            "- : Subtraction\n"
+            "* : Multiplication\n"
+            "/ : Division\n"
+            "** : Power (n1 ** n2)\n"
+            "ROOT : n2-th root of n1 (same as n1 ** (1/n2))"
+        )
+    elif operator == "+":
+        return n1 + n2
+    elif operator == "-":
+        return n1 - n2
+    elif operator == "*":
+        return n1 * n2
+    elif operator == "**":
+        return n1 ** n2
+    elif operator == "ROOT":
+        return n1 ** (1 / n2)
+    elif operator == "/":
+        return n1 / n2
+    else:
+        return "Unknown operator. Type 'HELP' for options."
 
-    def calculator(n1, n2, operator):
-        n3 = 1 / n2
-        if operator == "HELP":
-            return "You can type '+' and '-' and '*' for multipeling\n and '**' for powering the first number to the second number\n and 'root' for getting the root of first number with the index of the second number\n and for deviding simply use the symbol '/'"
-        elif operator == "+" :
-            return n1 + n2
-        elif operator == "-":
-            return n1 - n2
-        elif operator == "*" :
-            return n1 * n2
-        elif operator == "**":
-            return n1 ** n2
-        elif operator == "ROOT":
-            return n1 ** n3
-        elif operator == "/":
-            return n1 / n2
+while True:
     try:
-        print(calculator(n1, n2, operator))
+        n1 = float(input("Enter your first number: "))
+        n2 = float(input("Enter your second number: "))
+        operator = input("Enter your operator (type HELP for options): ").upper().strip()
+        result = calculator(n1, n2, operator)
+        print("Result:", result)
     except ZeroDivisionError:
         print("You can't divide by zero!")
     except ValueError:
-        print("Invalid input! Check the help section.")
+        print("Invalid input! Please enter valid numbers.")
     except Exception as e:
+        print("An unexpected error occurred:", e)
         print(f"Unknown error: {e}")
