@@ -1,6 +1,7 @@
-"""A simple and bite sized calculator for command line."""
+"""A simple and bite-sized calculator for the command line."""
+
 def calculator(number1, number2, operation):
-    """This function is used to calculate the result of an operation."""
+    """Calculate the result of an operation between two numbers."""
     if operation == "HELP":
         return (
             "Supported operators:\n"
@@ -11,34 +12,35 @@ def calculator(number1, number2, operation):
             "** : Power (n1 ** n2)\n"
             "ROOT : n2-th root of n1 (same as n1 ** (1/n2))"
         )
-    if operation == "+":
-        res =  number1 + number2
-    if operation == "-":
-        res =  number1 - number2
-    if operation == "*":
-        res =  number1 * number2
-    if operation == "**":
-        res =  number1 ** number2
-    if operation == "ROOT":
-        res =  number1 ** (1 / number2)
-    if operation == "/":
-        res =  number1 / number2
+    elif operation == "+":
+        return number1 + number2
+    elif operation == "-":
+        return number1 - number2
+    elif operation == "*":
+        return number1 * number2
+    elif operation == "**":
+        return number1 ** number2
+    elif operation == "ROOT":
+        return number1 ** (1 / number2)
+    elif operation == "/":
+        return number1 / number2
     else:
-        res = "Unknown operator. Type 'HELP' for options."
-    return res
+        return "Unknown operator. Type 'HELP' for options."
 
+
+# Interactive loop
 while True:
-    n1 = float(input("Enter your first number: "))
-    n2 = float(input("Enter your second number: "))
-    operator = input("Enter your operator (type HELP for options): ").upper().strip()
     try:
+        n1 = float(input("Enter your first number: "))
+        n2 = float(input("Enter your second number: "))
+        operator = input("Enter your operator (type HELP for options): ").upper().strip()
+
         result = calculator(n1, n2, operator)
-        print(result)
+        print(f"Result: {result}")
+
     except ValueError as e:
-        print(f"Invalid input: {e}")
-    except FileNotFoundError as e:
-        print(f"File not found: {e}")
+        print(f"❌ Invalid input: {e}")
     except ZeroDivisionError as e:
-        print(f"Division by zero: {e}")
+        print(f"🚫 Division by zero: {e}")
     except Exception as e:
         print(f"⚠️ Unexpected error: {e}")
