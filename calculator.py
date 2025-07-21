@@ -1,46 +1,77 @@
-"""A simple and bite-sized calculator for the command line."""
+"""A clean and extensible command-line calculator."""
 
-def calculator(number1, number2, operation):
-    """Calculate the result of an operation between two numbers."""
-    if operation == "HELP":
-        return (
-            "Supported operators:\n"
-            "+ : Addition\n"
-            "- : Subtraction\n"
-            "* : Multiplication\n"
-            "/ : Division\n"
-            "** : Power (n1 ** n2)\n"
-            "ROOT : n2-th root of n1 (same as n1 ** (1/n2))"
-        )
-    elif operation == "+":
-        return number1 + number2
-    elif operation == "-":
-        return number1 - number2
-    elif operation == "*":
-        return number1 * number2
-    elif operation == "**":
-        return number1 ** number2
-    elif operation == "ROOT":
-        return number1 ** (1 / number2)
-    elif operation == "/":
-        return number1 / number2
-    else:
-        return "Unknown operator. Type 'HELP' for options."
+def add(x, y): return x + y
+def subtract(x, y): return x - y
+def multiply(x, y): return x * y
+def divide(x, y): return x / y
+def power(x, y): return x ** y
+def root(x, y): return x ** (1 / y)
+
+# Operator mapping dictionary
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+    "**": power,
+    "ROOT": root
+}
+
+# Help message
+HELP_MESSAGE = """
+🧮 Supported operations:
++       : Addition
+-       : Subtraction
+*       : Multiplication
+/       : Division
+**      : Power (x ** y)
+ROOT    : y-th root of x (same as x ** (1/y))
+HELP    : Show this message
+QUIT    : Exit the calculator
+"""
+
+def calculator(x, y, operator):
+    """Perform calculation based on the operator."""
+    if operator == "HELP":
+        return HELP_MESSAGE
+    if operator in operations:
+        return operations[operator](x, y)
+    return "❓ Unknown operator. Type HELP to see options."
 
 
-# Interactive loop
+# ---- Main Loop ----
+print("🔢 Welcome to the Command-Line Calculator!")
 while True:
     try:
-        n1 = float(input("Enter your first number: "))
-        n2 = float(input("Enter your second number: "))
-        operator = input("Enter your operator (type HELP for options): ").upper().strip()
+        # First number input
+        n1_input = input("Enter the first number (or 'quit'): ").strip().lower()
+        if n1_input in ('quit', 'exit'):
+            print("👋 Exiting calculator. Goodbye!")
+            break
 
-        result = calculator(n1, n2, operator)
-        print(f"Result: {result}")
+        # Second number input
+        n2_input = input("Enter the second number (or 'quit'): ").strip().lower()
+        if n2_input in ('quit', 'exit'):
+            print("👋 Exiting calculator. Goodbye!")
+            break
 
-    except ValueError as e:
-        print(f"❌ Invalid input: {e}")
-    except ZeroDivisionError as e:
-        print(f"🚫 Division by zero: {e}")
+        # Operator input
+        operator = input("Enter operator (+, -, *, /, **, ROOT) or HELP/QUIT: ").strip().upper()
+        if operator in ('QUIT', 'EXIT'):
+            print("👋 Exiting calculator. Goodbye!")
+            break
+
+        # Convert inputs to floats
+        number1 = float(n1_input)
+        number2 = float(n2_input)
+
+        # Perform the operation
+        result = calculator(number1, number2, operator)
+        print(f"✅ Result: {result}")
+
+    except ValueError:
+        print("❌ Invalid number. Please enter a valid numeric value.")
+    except ZeroDivisionError:
+        print("🚫 Division by zero is not allowed.")
     except Exception as e:
         print(f"⚠️ Unexpected error: {e}")
